@@ -1,0 +1,487 @@
+/* Reseteo básico para html y body */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%; /* Asegura que también ocupen toda la altura disponible */
+}
+
+/* Estilos generales del body */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #e0f7fa;
+    color: #5d4037;
+
+}
+
+/* Estilos para el header */
+header {
+    font-size: 45px;
+    background-color: #00838f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Estilos para títulos h1, h2, h3 */
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    color: #b52345;
+}
+
+/* Estilos para main y section */
+main {
+    padding: 30px;
+    margin: 10px;
+}
+
+section {
+    font-size: 35px;
+    background-color: #fff3e0;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Estilos para footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #6a1b9a;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para botones e inputs */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+button:hover {
+    background-color: #45a049;
+}
+
+input[type="text"], .blank {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 80px;
+}
+
+/* Estilos comunes y para cuestionarios */
+.common-section, .activity, .cuestionario {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    text-align: left;
+}
+
+.common-text, .cuestionario p, .activity p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+ul.common-list, .cuestionario ul, .activity ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+li.common-item, .cuestionario li, .activity li {
+    margin-bottom: 5px;
+}
+
+.cuestionario img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.cuestionario li em {
+    font-size: 14px;
+    color: #555;
+}
+
+
+.tareas {
+    background-color: #fffde7; /* Fondo amarillo pálido para mayor luminosidad */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más prominente para un efecto 3D */
+    border: 3px solid #ff9800; /* Borde naranja brillante para mayor vibración */
+    max-width: 1100px;
+    position: relative; /* Para efectos de posicionamiento */
+    overflow: hidden; /* Asegura que nada sobresalga del borde redondeado */
+}
+
+.tareas:before {
+    content: "";
+    position: absolute;
+    top: -50px; right: -50px;
+    background-color: #ffeb3b; /* Un amarillo más vibrante para un efecto divertido */
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.tareas h2 {
+    font-size: 45px;
+    color: #e65100; /* Un tono de naranja más profundo para los títulos */
+    text-align: center;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.tareas h3 {
+    font-size: 40px;
+    color: #bf360c; /* Un color marrón-rojizo para subtítulos, destacando más */
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.tareas p, .tareas li {
+    font-size: 35px;
+    line-height: 1.5;
+    color: #4e342e; /* Un tono de marrón oscuro para el texto, mejor contraste */
+    position: relative;
+    z-index: 1;
+}
+
+.tareas ul {
+    list-style-type: square; /* Cambio a un estilo de lista cuadrado para diferenciación */
+    margin-left: 20px;
+    padding-left: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.tareas li {
+    margin-bottom: 8px; /* Más espacio entre items para claridad */
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 30%; /* Ajustar según la necesidad para hacer el video más pequeño */
+    height: 0;
+    overflow: hidden;
+    max-width: 560px; /* Puedes ajustar este valor para controlar el ancho máximo del video */
+    margin: auto; /* Centra el video horizontalmente */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.character {
+    text-align: center; /* Centra el contenido */
+    margin-bottom: 30px; /* Espacio entre cada personaje */
+}
+
+.character img {
+    width: 400px; /* Tamaño de las imágenes */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 4px solid #b0bec5; /* Marco alrededor de la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin-bottom: 15px; /* Espacio entre la imagen y el texto */
+}
+
+
+#conversation {
+    background-color: #fffde7; /* Fondo amarillo pálido */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra */
+    border: 3px solid #ff9800; /* Borde naranja */
+    max-width: 800px;
+}
+
+.dialogue {
+    margin-bottom: 20px;
+}
+
+.dialogue p {
+    color: #4e342e; /* Texto marrón oscuro */
+    margin-bottom: 10px;
+}
+
+.dialogue strong {
+    color: #e65100; /* Texto naranja */
+}
+
+input[type="text"] {
+    font-size: 25px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ff9800; /* Borde naranja cuando enfocado */
+    box-shadow: 0 0 5px #ff9800; /* Sombra cuando enfocado */
+}
+
+
+    /* Estilos para la sección de música */
+    #musicSection {
+        background-color: #fff8e1; /* Fondo amarillo claro */
+        padding: 30px;
+        margin-top: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+        text-align: center;
+    }
+
+    #musicSection h2 {
+        color: #f57c00; /* Naranja */
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Estilos para el contenedor del video */
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* Proporción de aspecto 16:9 para videos de YouTube */
+        height: 0;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Estilos para la letra de la canción */
+    .lyrics {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333; /* Texto oscuro */
+        text-align: left;
+    }
+
+    .lyrics p {
+        margin: 0;
+    }
+
+    /* Estilos para la traducción */
+    .translation {
+        font-style: italic;
+        color: #757575; /* Texto gris */
+    }
+
+    .flashcards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        justify-items: center;
+    }
+    
+    .flashcard {
+        background-color: #f39c12;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        text-align: center;
+        transition: transform 0.2s;
+    }
+    
+    .flashcard img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    .flashcard p {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+
+    .song-activity {
+        text-align: center;
+        padding: 20px;
+        background-color: #ffeb3b;
+        border-radius: 10px;
+        margin: 20px 0;
+    }
+    
+    .song-activity h2 {
+        font-size: 24px;
+        color: #d32f2f;
+        margin-bottom: 20px;
+    }
+    
+    .song-video iframe {
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .song-lyrics {
+        background-color: #f9fbe7;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    
+    .song-lyrics h3 {
+        font-size: 20px;
+        color: #4caf50;
+        margin-bottom: 10px;
+    }
+    
+    .song-lyrics p {
+        font-size: 18px;
+        color: #424242;
+        line-height: 1.6;
+    }
+    
+    .song-lyrics .translation {
+        color: #616161;
+        font-style: italic;
+    }
+
+    .memory-game {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .card {
+        background-color: #f39c12;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        text-align: center;
+        transition: transform 0.2s;
+    }
+
+    .card img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    
+    .flashcard:hover {
+        transform: scale(1.05);
+    }
+
+    .card.flipped {
+        transform: rotateY(180deg);
+    }
+    .card.flipped img {
+        display: block;
+    }
+    .card.flipped img {
+        opacity: 1;
+    }
+
+
+    .actividad {
+        background-color: #fffde7; 
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 15px; 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+        border: 3px solid #ff9800; 
+        max-width: 1100px;
+        position: relative; 
+        overflow: hidden; 
+    }
+    
+    .actividad h2 {
+        font-size: 45px;
+        color: #e65100; 
+        text-align: center;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .actividad h3 {
+        font-size: 40px;
+        color: #bf360c; 
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .actividad p, .actividad li {
+        font-size: 35px;
+        line-height: 1.5;
+        color: #4e342e; 
+        position: relative;
+        z-index: 1;
+    }
+    
+    .actividad ul {
+        list-style-type: none; 
+        padding-left: 0;
+        column-count: 3; /* Divide la lista en tres columnas */
+        column-gap: 40px; /* Espacio entre las columnas */
+    }
+    
+    .actividad li {
+        margin-bottom: 8px;
+    }
+    
+    

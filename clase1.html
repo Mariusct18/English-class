@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clases de Inglés</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a nuestras clases de inglés</h1>
+        <nav>
+            <ul>
+                <li><a href="#mes1">Mayo</a></li>
+                <li><a href="#mes2">Junio</a></li>
+                <li><a href="#mes3">Julio</a></li>
+                <!-- Añade más meses según necesites -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="mes1">
+            <h2>Mayo - Bienvenida y Reglas de la Clase</h2>
+            <p>Este mes, además de iniciar nuestro viaje de aprendizaje con la película "Up", estableceremos las bases para un ambiente de aprendizaje seguro y respetuoso.</p>
+            <section id="reglas">
+
+
+            <h3>Reglas del Aula</h3>
+            <ul id="listaReglas">
+                <li><strong>Respeto mutuo:</strong> Hablar con respeto a los compañeros y al profesor. Escuchar cuando alguien más está hablando.</li>
+                <li><strong>Participación activa:</strong> Levantar la mano para hablar y participar en las actividades de clase.</li>
+                <li><strong>Cuidado del entorno:</strong> Mantener el aula limpia y ordenada. Cuidar los materiales y el mobiliario.</li>
+                <li><strong>Puntualidad:</strong> Llegar a tiempo a clase y estar listo para aprender.</li>
+                <li><strong>Honestidad:</strong> Ser honesto en todo el trabajo de clase y las tareas.</li>
+            </ul>
+        
+            <h3>Consecuencias por no seguir las reglas</h3>
+            <ol>
+                <li><strong>Primer incidente:</strong> Advertencia verbal y recordatorio de la regla.</li>
+                <li><strong>Segundo incidente:</strong> Breve tiempo fuera de la actividad de clase para reflexionar sobre su comportamiento.</li>
+                <li><strong>Incidentes repetidos:</strong> Conversación con los padres y planificación de estrategias para mejorar el comportamiento.</li>
+            </ol>
+        
+            <h3>¡Participa en la creación de nuestras reglas!</h3>
+            <p>¿Tienes alguna idea para una regla que crees que deberíamos tener? Escríbela aquí:</p>
+            <input type="text" id="sugerenciaRegla" placeholder="Escribe tu regla aquí...">
+            <button onclick="agregarRegla()">Añadir regla</button>
+            <p id="respuestaRegla"></p>
+        
+            <script>
+                function agregarRegla() {
+                    var input = document.getElementById('sugerenciaRegla');
+                    var lista = document.getElementById('listaReglas');
+                    var respuesta = document.getElementById('respuestaRegla');
+                    if (input.value.trim() !== "") {
+                        var nuevaRegla = document.createElement('li');
+                        nuevaRegla.innerHTML = '<strong>Nueva Regla:</strong> ' + input.value;
+                        lista.appendChild(nuevaRegla);
+                        respuesta.innerHTML = "¡Regla añadida exitosamente!";
+                        input.value = ""; // Limpiar el campo de texto después del envío
+                    } else {
+                        respuesta.innerHTML = "Por favor, escribe una regla antes de enviar.";
+                    }
+                }
+            </script>
+            </section>
+            <section id="tarea1" class="tareas">
+                <h2>Primera Tarea: Hoja de Datos Personales</h2>
+                <p>¡Hola! Estamos muy emocionados de aprender contigo. Para que nuestras clases sean súper especiales y seguras, necesitamos saber un poquito más sobre ti. Por favor, llena una hoja con algunos detalles sobre ti y tráela a la próxima clase. Esto nos ayudará a conocerte mejor y a hacer que nuestras clases sean aún más divertidas y seguras para todos.</p>
+                
+                <h3>Datos Básicos:</h3>
+                <ul>
+                    <li>Nombre del estudiante</li>
+                    <li>Fecha de nacimiento</li>
+                    <li>Información de contacto de emergencia</li>
+                    <li>Datos de contacto de los padres o tutores</li>
+                    <li>Necesidades especiales (alergias, condiciones médicas, necesidades educativas especiales)</li>
+                </ul>
+            
+                <h3>Intereses y Expectativas:</h3>
+                <ul>
+                    <li>Intereses particulares del estudiante (música, deportes, ciencias, etc.)</li>
+                    <li>Expectativas de los padres respecto al curso</li>
+                    <li>Preguntas sobre hobbies o actividades favoritas que puedan integrarse en el aprendizaje</li>
+                </ul>
+            
+                <p>Por favor, asegúrate de llenar todos los campos con información precisa y actualizada. Esta información es crucial para adaptar nuestras actividades y estrategias de enseñanza a tus necesidades e intereses.</p>
+            </section>
+            <section id="actividadImagenes">
+                <h2>Image Activity - Complete the Sentences</h2>
+                <p>Look at the following images and complete the sentences on a sheet of paper.</p>            
+                
+                <div class="cuestionario">
+                    <h3>Example 1: A Zoo</h3>
+                    <img src="Imagenes\zoo.jpg" alt="Animales variados en el zoológico" class="imagen-actividad">
+                    <ul>
+                        <li>"You can see a __ in the cage." <em>(posibles respuestas: monkey, lion, bird)</em></li>
+                        <li>"The __ is eating grass." <em>(posible respuesta: giraffe, elephant, zebra)</em></li>
+                        <li>"A __ is swimming in the water." <em>(posible respuesta: fish, duck, turtle)</em></li>
+                    </ul>
+                </div>
+            
+                <div class="cuestionario">
+                    <h3>Example 2: A classroom</h3>
+                    <img src="Imagenes\classroom.jpg" alt="Una sala de clase con niños y diferentes objetos" class="imagen-actividad">
+                    <ul>
+                        <li>"The teacher is writing on the __." <em>(posible respuesta: board, book, desk)</em></li>
+                        <li>"There are many __ on the shelf." <em>(posible respuesta: books, games, toys)</em></li>
+                        <li>"A student is reading a __." <em>(posible respuesta: book, note, letter)</em></li>
+                    </ul>
+                </div>
+            
+                <div class="cuestionario">
+                    <h3>Example 3: A house</h3>
+                    <img src="Imagenes\house.png" alt="Diferentes habitaciones de una casa" class="imagen-actividad">
+                    <ul>
+                        <li>"The __ is sleeping on the sofa." <em>(posibles respuestas: cat, dog, baby)</em></li>
+                        <li>"I can see a __ in the bathroom." <em>(posible respuesta: towel, soap, brush)</em></li>
+                        <li>"There are flowers in the __." <em>(posible respuesta: vase, garden, kitchen)</em></li>
+                    </ul>
+                </div>
+                
+                <div class="cuestionario">
+                    <h3>Example 4: An amusement park</h3>
+                    <img src="Imagenes\amusement_park.jpeg" alt="Niños disfrutando de diferentes atracciones en un parque" class="imagen-actividad">
+                    <ul>
+                        <li>"There is a big __ on the track." <em>(posibles respuestas: car, roller coaster, train)</em></li>
+                        <li>"Kids are playing in the __." <em>(posible respuesta: sandbox, water, slide)</em></li>
+                        <li>"I can buy ice cream at the __." <em>(posible respuesta: kiosk, restaurant, shop)</em></li>
+                    </ul>
+                </div>
+                
+                <div class="cuestionario">
+                    <h3>Example 5: A grocery store</h3>
+                    <img src="Imagenes\grocery_store.jpg" alt="Interior de una tienda de alimentos con varios productos" class="imagen-actividad">
+                    <ul>
+                        <li>"The __ are in the basket." <em>(posibles respuestas: apples, eggs, bread)</em></li>
+                        <li>"He is buying __ from the store." <em>(posible respuesta: milk, cookies, cheese)</em></li>
+                        <li>"The fruits are next to the __." <em>(posible respuesta: vegetables, door, cashier)</em></li>
+                    </ul>
+                </div>
+                
+                
+            </section>
+            <section id="songActivities">
+                <h2>Canta y Aprende con "If You're Happy and You Know It"</h2>
+
+                    <!-- Contenedor del video -->
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/M6LoRZsHMSs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <div class="activity">
+                    <h3>Actividad 1: Cantar y Moverse</h3>
+                    <p>Vamos a cantar y movernos al ritmo de la música. Cuando cantes la canción, haz los siguientes movimientos:</p>
+                    <ul>
+                        <li>Cuando escuches "clap your hands", aplaude dos veces.</li>
+                        <li>Cuando escuches "stomp your feet", pisa fuerte dos veces.</li>
+                        <li>Cuando escuches "shout 'Hooray'", grita "¡Hooray!"</li>
+                    </ul>
+                    <p>¡Es divertido y te ayudará a recordar nuevas palabras mientras te mueves!</p>
+                </div>
+            
+                <div class="activity">
+                    <h3>Actividad 2: Llenar los Espacios en Blanco</h3>
+                    <p>Escucha la canción y completa los espacios en blanco con las palabras correctas. Utiliza las palabras: <strong>clap, stomp, shout, Hooray</strong>.</p>
+                    <form id="fillInTheBlanks">
+                        <p>If you're happy and you know it, <input type="text" class="blank" placeholder="____"> your hands.</p>
+                        <p>If you're happy and you know it, <input type="text" class="blank" placeholder="____"> your hands.</p>
+                        <p>If you're happy and you know it, then your face will surely show it.</p>
+                        <p>If you're happy and you know it, <input type="text" class="blank" placeholder="____"> your hands.</p>
+                
+                        <p>If you're happy and you know it, <input type="text" class="blank" placeholder="____"> your feet.</p>
+                        <p>If you're happy and you know it, <input type="text" class="blank" placeholder="____"> your feet.</p>
+                        <p>If you're happy and you know it, then your face will surely show it.</p>
+                        <p>If you're happy and you know it, <input type="text" class="blank" placeholder="____"> your feet.</p>
+                
+                        <p>If you're happy and you know it, <input type="text" class="blank" placeholder="____"> "Hooray!"</p>
+                        <p>If you're happy and you know it, <input type="text" class="blank" placeholder="____"> "Hooray!"</p>
+                        <p>If you're happy and you know it, then your face will surely show it.</p>
+                        <p>If you're happy and you know it, <input type="text" class="blank" placeholder="____"> "Hooray!"</p>
+                
+                        <p>If you're happy and you know it, do all <input type="text" class="blank" placeholder="____"> </p>
+                        <p>If you're happy and you know it, do all <input type="text" class="blank" placeholder="____"> </p>
+                        <p>If you're happy and you know it, then your face will surely show it.</p>
+                        <p>If you're happy and you know it, do all <input type="text" class="blank" placeholder="____">.</p>
+                
+                        <button type="button" onclick="checkAnswers()">Enviar Respuestas</button>
+                    </form>
+                    <p id="feedback"></p>
+                </div>
+                
+            
+                <div class="activity">
+                    <h3>Actividad 3: Repetición en Grupo</h3>
+                    <p>Forma un pequeño grupo con tus amigos y cada grupo cantará una parte de la canción mientras los demás escuchan. Es una buena manera de practicar tu pronunciación y recordar la canción mejor.</p>
+                </div>
+            
+                <section id="tareaCreativa" class="tareas">
+                    <h2>Tarea para Casa: Actividad 4 - Interpretación Creativa</h2>
+                    <p>¡Estamos muy emocionados de ver cuánto has aprendido! Después de disfrutar de la canción, te invitamos a usar tu imaginación y crear tu propia estrofa. Piensa en diferentes acciones y emociones que puedas expresar con la melodía de la canción.</p>
+                    
+                    <h3>Ejemplo Creativo:</h3>
+                    <p>"If you're excited and you know it, jump up high (salta alto)."</p>
+                    
+                    <p>Escribe tu estrofa creativa y tráela a la próxima clase para compartirla con tus compañeros. ¡Será muy divertido ver todas las ideas creativas que tengas!</p>
+                </section>
+                
+            </section>
+            <section id="theArlosFarm">
+                <h2>The Arlo's Farm</h2>
+                
+                <div class="character">
+                    <img src="Imagenes\arlo.jpg" alt="Arlo">
+                    <h3>Arlo</h3>
+                    <p>Hi kids! Meet Arlo, the youngest dinosaur in his family. Arlo is 11 years old and he's a little bit scared of everything. He tries his best to help out on the farm, but sometimes his fears get in the way. One day, he gets swept away by a river and goes on a big adventure to find his way back home. Along the way, he learns that he's braver than he thought!</p>
+                </div>
+                
+                <div class="character">
+                    <img src="Imagenes\ida.jpg" alt="Mama">
+                    <h3>Mama</h3>
+                    <p>This is Mom! Mom is a smart and loving mom who keeps everything running smoothly on the farm. She works hard to take care of her family and she's always there to give them love and support.</p>
+                </div>
+                
+                <div class="character">
+                    <img src="Imagenes\henry.jpg" alt="Papa">
+                    <h3>Papa</h3>
+                    <p>Meet Dad! Dad is a strong and caring dad who works hard to take care of his family on the farm. He's always there to support Arlo, even when Arlo is scared. Dad believes in Arlo and knows that he can do anything he sets his mind to.</p>
+                </div>
+                
+                <div class="character">
+                    <img src="Imagenes\spot.jpg" alt="Spot">
+                    <h3>Spot</h3>
+                    <p>Say hello to Spot! Spot is a wild and tough little human boy who has lived in the wilderness all by himself. Even though he doesn't talk much, he's really brave and helpful. Spot becomes friends with Arlo and helps him on his journey back home.</p>
+                </div>
+                
+                <div class="character">
+                    <img src="Imagenes\libby.jpg" alt="Libby">
+                    <h3>Libby</h3>
+                    <p>And last but not least, Libby! Libby is Arlo's sister. She's smart, determined, and she's not afraid to get her hands dirty on the farm. Libby loves to play jokes on her family and she always keeps things fun!</p>
+                </div>
+                
+                <div class="character">
+                    <img src="Imagenes\buck.jpg" alt="Buck">
+                    <h3>Buck</h3>
+                    <p>Introducing Buck! Buck is Arlo's big brother. He's bigger and stronger than Arlo, and sometimes he likes to tease him. Even though he likes to joke around, he still cares about his little brother.</p>
+                </div>
+            </section>
+            <section id="conversation">
+                <h2>Practice Conversation</h2>
+                
+                <div class="dialogue">
+                    <p><strong>A:</strong> Hi. I’m Arlo. What’s your name?</p>
+                    <p><strong>B:</strong> <input type="text" placeholder="Enter your name"></p>
+                </div>
+                
+                <div class="dialogue">
+                    <p><strong>A:</strong> This is my friend, Spot.</p>
+                    <p><strong>B:</strong> <input type="text" placeholder="Enter your response"></p>
+                </div>
+                
+                <div class="dialogue">
+                    <p><strong>A:</strong> Hi, Arlo. How are you? Are you OK?</p>
+                    <p><strong>B:</strong> <input type="text" placeholder="Enter your response"></p>
+                </div>
+                
+                <div class="dialogue">
+                    <p><strong>A:</strong> Say hello to Buck for me.</p>
+                    <p><strong>B:</strong> <input type="text" placeholder="Enter your response"></p>
+                </div>
+                
+                <div class="dialogue">
+                    <p><strong>A:</strong> See you later.</p>
+                    <p><strong>B:</strong> <input type="text" placeholder="Enter your response"></p>
+                </div>
+            </section>
+            <section class="tareas">
+                <h2>Task: Vocabulary Practice</h2>
+                <p>For this task, you will need to create two sentences for each of the following vocabulary words, using characters you draw.Remember to use your creativity!</p>
+                <div class="task-details">
+                    <h3>Vocabulary:</h3>
+                    <ul>
+                        <li><strong>Scared:</strong> Asustado</li>
+                        <li><strong>Adventure:</strong> Aventura</li>
+                        <li><strong>Smart:</strong> Inteligente</li>
+                        <li><strong>Works hard:</strong> Trabaja duro</li>
+                        <li><strong>Dirty:</strong> Sucio/a</li>
+                    </ul>
+                </div>
+                <div class="student-examples">
+                    <h3>Student Examples:</h3>
+                    <ul>
+                        <li>Scared: I was scared when I saw a big spider in my room.</li>
+                        <li>Adventure: Going camping with my friends was an exciting adventure.</li>
+                        <li>Smart: My little sister is very smart; she always gets good grades in school.</li>
+                        <li>Works hard: My mom works hard every day to take care of our family.</li>
+                        <li>Dirty: After playing soccer, my clothes were dirty and covered in mud.</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="musicSection">
+                <h2>Canta con "The Bare Necessities"</h2>
+                
+                <!-- Video de la canción -->
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6BH-Rxd-NBo" frameborder="0" allowfullscreen></iframe>
+                </div>
+                
+                <!-- Letra de la canción con traducción -->
+                <div class="lyrics" style="text-align: center;">
+                    <p>
+                        Look for the bare necessities, the simple bare necessities<br>
+                        <span class="translation">Busca las necesidades básicas, las simples necesidades básicas</span><br>
+                        Forget about your worries and your strife<br>
+                        <span class="translation">Olvídate de tus preocupaciones y tus conflictos</span><br>
+                        I mean the bare necessities, old mother nature's recipes<br>
+                        <span class="translation">Quiero decir las necesidades básicas, las recetas de la madre naturaleza</span><br>
+                        That bring the bare necessities of life<br>
+                        <span class="translation">Que traen las necesidades básicas de la vida</span><br>
+                        Wherever I wander, wherever I roam<br>
+                        <span class="translation">Dondequiera que vaya, dondequiera que deambule</span><br>
+                        I couldn't be fonder of my big home<br>
+                        <span class="translation">No podría estar más feliz de mi gran hogar</span><br>
+                        The bees are buzzin' in the tree<br>
+                        <span class="translation">Las abejas están zumbando en el árbol</span><br>
+                        To make some honey just for me<br>
+                        <span class="translation">Para hacer un poco de miel solo para mí</span><br>
+                        When you look under the rocks and plants<br>
+                        <span class="translation">Cuando miras debajo de las rocas y las plantas</span><br>
+                        And take a glance at the fancy ants, then maybe try a few<br>
+                        <span class="translation">Y echas un vistazo a las hormigas elegantes, entonces tal vez intenta algunas</span><br>
+                        The bare necessities of life will come to you<br>
+                        <span class="translation">Las necesidades básicas de la vida vendrán a ti</span><br>
+                        They'll come to you!<br>
+                        <span class="translation">¡Vendrán a ti!</span><br>
+                        Look for the bare necessities, the simple bare necessities<br>
+                        <span class="translation">Busca las necesidades básicas, las simples necesidades básicas</span><br>
+                        Forget about your worries and your strife<br>
+                        <span class="translation">Olvídate de tus preocupaciones y tus conflictos</span><br>
+                        I mean the bare necessities<br>
+                        <span class="translation">Quiero decir las necesidades básicas</span><br>
+                        That's why a bear can rest at ease<br>
+                        <span class="translation">Por eso un oso puede descansar tranquilo</span><br>
+                        With just the bare necessities of life<br>
+                        <span class="translation">Con solo las necesidades básicas de la vida</span>
+                    </p>
+                </div>
+                <h2>Canta con "I'll make man out of you"</h2>
+
+                <div class="song">
+                    <div class="video-container">
+                        <!-- Video de la segunda canción -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/10KGEAcRy-c" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="lyrics" style="text-align: center;">
+                        <p>
+                            Let's get down to business, to defeat the Huns<br>
+                            <span class="translation">Pongámonos manos a la obra, para derrotar a los Hunos</span><br>
+                            Did they send me daughters when I asked for sons?<br>
+                            <span class="translation">¿Me enviaron hijas cuando pedí hijos?</span><br>
+                            You're the saddest bunch I ever met<br>
+                            <span class="translation">Eres el grupo más triste que he conocido</span><br>
+                            But you can bet before we're through<br>
+                            <span class="translation">Pero puedes apostar antes de que terminemos</span><br>
+                            Mister, I'll make a man out of you<br>
+                            <span class="translation">Señor, haré un hombre de ti</span><br>
+                            Tranquil as a forest, but on fire within<br>
+                            <span class="translation">Tranquilo como un bosque, pero ardiendo por dentro</span><br>
+                            Once you find your center, you are sure to win<br>
+                            <span class="translation">Una vez que encuentres tu centro, estás seguro de ganar</span><br>
+                            You're a spineless, pale, pathetic lot<br>
+                            <span class="translation">Eres un montón de cobardes, pálidos, patéticos</span><br>
+                            And you haven't got a clue<br>
+                            <span class="translation">Y no tienes ni idea</span><br>
+                            Somehow I'll make a man out of you<br>
+                            <span class="translation">De alguna manera haré un hombre de ti</span><br>
+                            I'm never gonna catch my breath<br>
+                            <span class="translation">Nunca voy a recuperar el aliento</span><br>
+                            Say goodbye to those who knew me<br>
+                            <span class="translation">Dile adiós a los que me conocieron</span><br>
+                            Boy, was I a fool in school for cutting gym?<br>
+                            <span class="translation">¿Chico, fui un tonto en la escuela por no hacer gimnasia?</span><br>
+                            This guy got 'em scared to death<br>
+                            <span class="translation">Este chico los tiene asustados hasta la muerte</span><br>
+                            Hope he doesn't see right through me<br>
+                            <span class="translation">Espero que no vea a través de mí</span><br>
+                            Now I really wish that I knew how to swim<br>
+                            <span class="translation">Ahora realmente desearía saber nadar</span><br>
+                            (Be a man) you must be swift as the coursing river<br>
+                            <span class="translation">(Sé un hombre) debes ser rápido como el río que corre</span><br>
+                            (Be a man) with all the force of a great typhoon<br>
+                            <span class="translation">(Sé un hombre) con toda la fuerza de un gran tifón</span><br>
+                            (Be a man) with all the strength of a raging fire<br>
+                            <span class="translation">(Sé un hombre) con toda la fuerza de un fuego furioso</span><br>
+                            Mysterious as the dark side of the moon<br>
+                            <span class="translation">Tan misterioso como el lado oscuro de la luna</span>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <section class="introduction">
+                <h2>Introduction</h2>
+                <div class="greetings">
+                    <h3>Greetings</h3>
+                    <p>Good morning, everyone! How are you today?</p>
+                </div>
+                <div class="review">
+                    <h3>Review</h3>
+                    <p>Before we start, let's review some of the words we learned last time.</p>
+                    <p>Who can tell me what 'scared' means?</p>
+                    <p>Can anyone give me a sentence with 'smart'?</p>
+                </div>
+                <div class="objective">
+                    <h3>Today's Objective</h3>
+                    <p>Today, we are going to learn about different foods in English.</p>
+                    <p>We will see pictures, sing a song, play a game, draw, and read a story!</p>
+                </div>
+            </section>
+            <section class="vocabulary-presentation">
+                <h2>Presentation of Vocabulary</h2>
+                <div class="flashcards">
+                    <div class="flashcard">
+                        <img src="Imagenes/toast.jpg" alt="Toast">
+                        <p>Toast</p>
+                    </div>
+                    <div class="flashcard">
+                        <img src="Imagenes/pie.jpg" alt="Pie">
+                        <p>Pie</p>
+                    </div>
+                    <div class="flashcard">
+                        <img src="Imagenes/cake.jpg" alt="Cake">
+                        <p>Cake</p>
+                    </div>
+                    <div class="flashcard">
+                        <img src="Imagenes/fish.jpg" alt="Fish">
+                        <p>Fish</p>
+                    </div>
+                    <div class="flashcard">
+                        <img src="Imagenes/pizza.jpg" alt="Pizza">
+                        <p>Pizza</p>
+                    </div>
+                    <div class="flashcard">
+                        <img src="Imagenes/chips.jpg" alt="Chips">
+                        <p>Chips</p>
+                    </div>
+                    <div class="flashcard">
+                        <img src="Imagenes/pasta.jpg" alt="Pasta">
+                        <p>Pasta</p>
+                    </div>
+                    <div class="flashcard">
+                        <img src="Imagenes/sausage.jpg" alt="Sausage">
+                        <p>Sausage</p>
+                    </div>
+                    <div class="flashcard">
+                        <img src="Imagenes/hamburguer.jpg" alt="Hamburger">
+                        <p>Hamburger</p>
+                    </div>
+                    <div class="flashcard">
+                        <img src="Imagenes/noodles.jpg" alt="Noodles">
+                        <p>Noodles</p>
+                    </div>
+                    <div class="flashcard">
+                        <img src="Imagenes/chicken.jpg" alt="Chicken">
+                        <p>Chicken</p>
+                    </div>
+                    <div class="flashcard">
+                        <img src="Imagenes/sandwich.jpg" alt="Sandwich">
+                        <p>Sandwich</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="song-activity">
+                <h2>Song Activity</h2>
+                <div class="song-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mfReSbQ7jzE?feature=shared" title="I Eat Fruit" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="song-lyrics" style="text-align: center;">
+                    <h3>I Eat Fruit</h3>
+                    <p>
+                        Laaaaaaaa!!!!!!!<br>
+                        <span class="translation">Laaaaaaaa !!!!!!!!</span><br>
+                        One, two, three, four!<br>
+                        <span class="translation">¡Uno, dos, tres, cuatro!</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                        I eat fruit! - I eat fruit!<br>
+                        <span class="translation">¡Yo como fruta! - ¡Yo como fruta!</span><br>
+                        Every single day<br>
+                        <span class="translation">Todos los días</span><br>
+                        I eat fruit! - I eat fruit!<br>
+                        <span class="translation">¡Yo como fruta! - ¡Yo como fruta!</span><br>
+                        Every single day<br>
+                        <span class="translation">Todos los días</span><br>
+                        Mondays, Tuesdays, Wednesdays, Thursdays, Fridays, Saturdays, Sundays<br>
+                        <span class="translation">Lunes, martes, miércoles, jueves, viernes, sábado, domingo</span><br>
+                        Mondays, Tuesdays, Wednesdays, Thursdays, Fridays, Saturdays, Sundays<br>
+                        <span class="translation">Lunes, martes, miércoles, jueves, viernes, sábado, domingo</span><br>
+                        Mondays I eat apples - Mondays I eat apples<br>
+                        <span class="translation">Los lunes yo como manzanas - Los lunes yo como manzanas</span><br>
+                        Tuesdays I eat pears - Tuesdays I eat pears<br>
+                        <span class="translation">Los martes yo como peras - Los martes yo como peras</span><br>
+                        Wednesdays I eat cherries - Wednesdays I eat cherries<br>
+                        <span class="translation">Los miércoles yo como cerezas - Los miércoles yo como cerezas</span><br>
+                        Thursdays I don't care! - Thursdays I don't care!<br>
+                        <span class="translation">Los jueves no me importa! - Los jueves no me importa!</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                        I eat fruit - I eat fruit<br>
+                        <span class="translation">Yo como fruta - Yo como fruta</span><br>
+                        Every single day<br>
+                        <span class="translation">Todos los días</span><br>
+                        I eat fruit - I eat fruit<br>
+                        <span class="translation">Yo como fruta - Yo como fruta</span><br>
+                        Every single day<br>
+                        <span class="translation">Todos los días</span><br>
+                        Mondays, Tuesdays, Wednesdays, Thursdays, Fridays, Saturdays, Sundays<br>
+                        <span class="translation">Lunes, martes, miércoles, jueves, viernes, sábado, domingo</span><br>
+                        Mondays, Tuesdays, Wednesdays, Thursdays, Fridays, Saturdays, Sundays<br>
+                        <span class="translation">Lunes, martes, miércoles, jueves, viernes, sábado, domingo</span><br>
+                        Fridays I eat mangoes - Fridays I eat mangoes<br>
+                        <span class="translation">Los viernes yo como mangos - los viernes yo como mangos</span><br>
+                        Saturdays some grapes - Saturdays some grapes<br>
+                        <span class="translation">Sábados algunas uvas - sábados algunas uvas</span><br>
+                        Sundays I eat berries - Sundays I eat berries<br>
+                        <span class="translation">Domingos yo como bayas - domingos yo como bayas</span><br>
+                        I think that fruits are great! - I think that fruits are great!<br>
+                        <span class="translation">Creo que las frutas son grandes! - Creo que las frutas son grandes!</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                        apples - apples<br>
+                        <span class="translation">manzanas - manzanas</span><br>
+                        pears - pears<br>
+                        <span class="translation">peras - peras</span><br>
+                        cherries - cherries<br>
+                        <span class="translation">cerezas - cerezas</span><br>
+                        I don't care! - I don't care!<br>
+                        <span class="translation">No me importa! - No me importa!</span><br>
+                        mangoes - mangoes<br>
+                        <span class="translation">mangos - mangos</span><br>
+                        grapes - grapes<br>
+                        <span class="translation">uvas - uvas</span><br>
+                        berries - berries<br>
+                        <span class="translation">bayas - bayas</span><br>
+                        Fruits are great! - Fruits are great!<br>
+                        <span class="translation">Las frutas son grandes! - Las frutas son grandes!</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                        Na, na, na, na, na, na<br>
+                        <span class="translation">Na, na, na, na, na, na</span><br>
+                    </p>
+                </div>
+            </section>
+            <section class="game-activity">
+                <div class="activity">
+                    <h2>4. Juego de Memoria (20 minutos)</h2>
+                    <div class="instructions">
+                        <h3>Preparación:</h3>
+                        <p>Prepara un juego de memoria con tarjetas de alimentos. Cada par de tarjetas debe tener la imagen de un alimento.</p>
+                        <h3>Cómo jugar:</h3>
+                        <p>Los estudiantes deben encontrar las parejas de alimentos diciendo el nombre en inglés cada vez que vuelvan una tarjeta.</p>
+                    </div>
+                    <div class="memory-game">
+                        <!-- Tarjetas de alimentos -->
+                        <div class="card" data-name="toast">
+                            <img src="Imagenes/toast.jpg" alt="Toast">
+                        </div>
+                        <div class="card" data-name="pie">
+                            <img src="Imagenes/pie.jpg" alt="Pie">
+                        </div>
+                        <div class="card" data-name="cake">
+                            <img src="Imagenes/cake.jpg" alt="Cake">
+                        </div>
+                        <div class="card" data-name="fish">
+                            <img src="Imagenes/fish.jpg" alt="Fish">
+                        </div>
+                        <div class="card" data-name="pizza">
+                            <img src="Imagenes/pizza.jpg" alt="Pizza">
+                        </div>
+                        <div class="card" data-name="chips">
+                            <img src="Imagenes/chips.jpg" alt="Chips">
+                        </div>
+                        <div class="card" data-name="pasta">
+                            <img src="Imagenes/pasta.jpg" alt="Pasta">
+                        </div>
+                        <div class="card" data-name="sausage">
+                            <img src="Imagenes/sausage.jpg" alt="Sausage">
+                        </div>
+                        <div class="card" data-name="hamburger">
+                            <img src="Imagenes/hamburguer.jpg" alt="Hamburger">
+                        </div>
+                        <div class="card" data-name="noodles">
+                            <img src="Imagenes/noodles.jpg" alt="Noodles">
+                        </div>
+                        <div class="card" data-name="chicken">
+                            <img src="Imagenes/chicken.jpg" alt="Chicken">
+                        </div>
+                        <div class="card" data-name="sandwich">
+                            <img src="Imagenes/sandwich.jpg" alt="Sandwich">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="tareas">
+                    <h2>Tarea: Dibuja tus 7 alimentos favoritos y construye un flashcard en casa</h2>
+                    
+                    <h3>Dibuja tus alimentos favoritos:</h3>
+                    <p> Puedes dibujar frutas, verduras, carnes, o cualquier alimento que te guste.</p>
+                    
+                    <h3>Construye tus flashcards:</h3>
+                    <p>Después de dibujar tus alimentos favoritos, recorta cada dibujo y pégalos en cartulinas pequeñas o tarjetas de índice.</p>
+                    
+                    <h3>Juega con tus padres:</h3>
+                    <p>Una vez que hayas creado tus flashcards, juega con tus padres. Muestra cada flashcard y di el nombre del alimento en inglés. Tus padres pueden ayudarte a practicar y aprender.</p>
+            </section>
+            <section class="actividad">
+                <h2>Activity 6: Short Story Reading</h2>
+                
+                <div class="cuento">
+                    <h3>Thematic Story:</h3>
+                    <p>Read the following short story about Tom's birthday.</p>
+                    <p><strong>Title: </strong>Tom's Birthday</p>
+                    <p><strong>Once upon a time</strong>, there was a boy named Tom who was very happy because it was his birthday. His mom had a big party with lots of friends. Tom helped put up balloons and confetti.</p>
+                    <p>On the table, there was a big pizza with sausage and cheese. There was also a yummy chocolate cake with cream and strawberries on top. Tom couldn't wait to eat them.</p>
+                    <p>During the party, everyone sang "Happy Birthday" to Tom. He blew out the candles on his cake. Then, they cut the cake and everyone got a piece.</p>
+                    <p>Tom's mom made a big bowl of pasta with tomato sauce and chicken. All the guests said it was delicious.</p>
+                    <p>After the party, Tom thanked his friends and gave them each a piece of cake to take home. He was very happy to celebrate with them.</p>
+                    <p>And so, Tom had a great birthday with yummy food and fun friends!</p>
+                </div>
+                
+                <div class="preguntas">
+                    <h3>Questions and Answers:</h3>
+                    <ol>
+                        <li>What was Tom celebrating?</li>
+                        <li>What was on the table at the party?</li>
+                        <li>What did Tom's mom make?</li>
+                        <li>How did Tom feel at the end?</li>
+                        <li>What did Tom share with his friends?</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="actividad">
+                <h2>Actividad 7: Reforzar Conocimientos</h2>
+                
+                <div class="hoja-trabajo">
+                    <h3>Completa las Palabras</h3>
+                    <p>Completa las palabras con las letras que faltan para nombrar diferentes alimentos.</p>
+                    
+                    <ul>
+                        <li>1. T__st</li>
+                        <li>2. P__</li>
+                        <li>3. C__e</li>
+                        <li>4. F__h</li>
+                        <li>5. P__zza</li>
+                        <li>6. Ch_ps</li>
+                        <li>7. P_st__</li>
+                        <li>8. S__sage</li>
+                        <li>9. H_mb_rg__</li>
+                        <li>10. N__dl__s</li>
+                        <li>11. Ch_k__n</li>
+                        <li>12. S__dw_ch</li>
+                    </ul>
+                </div>
+            </section>
+            
+            
+            
+            
+            
+        </section>
+            
+       
+                    
+        
+        <section id="mes2">
+            <h2>Junio - Tema del Mes</h2>
+            <p>Descripción del tema de junio y las actividades planificadas.</p>
+            <!-- Más contenido aquí -->
+        </section>
+        <section id="mes3">
+            <h2>Julio - Tema del Mes</h2>
+            <p>Descripción del tema de julio y las actividades planificadas.</p>
+            <!-- Más contenido aquí -->
+        </section>
+        <!-- Añade más secciones para otros meses -->
+    </main>
+    <footer>
+        <p>Contacto: Jhon.cano@utp.edu.co</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+    
